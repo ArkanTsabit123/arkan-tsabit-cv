@@ -1,0 +1,133 @@
+# ------------------------------
+# OS generated files
+# ------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ------------------------------
+# Windows image cache
+# ------------------------------
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# ------------------------------
+# Mac specific
+# ------------------------------
+*.AppleDouble
+*.LSOverride
+._*
+
+# ------------------------------
+# Linux specific
+# ------------------------------
+*~
+
+# ------------------------------
+# Editor files
+# ------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-*
+*.sublime-project
+*.sublime-workspace
+
+# ------------------------------
+# Temporary files
+# ------------------------------
+*.tmp
+*.temp
+*.log
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.cache
+
+# ------------------------------
+# Backup or duplicate HTML files
+# ------------------------------
+index-2.html
+index-backup.html
+*-backup.html
+*-copy.html
+*.backup.html
+
+# ------------------------------
+# Duplicate images folder
+# ------------------------------
+assets/images/images\ 2/
+**/images\ 2/
+
+# ------------------------------
+# Demo screenshots (personal)
+# ------------------------------
+website-demo-image/
+
+# ------------------------------
+# Empty or not-ready-yet folders
+# ------------------------------
+portofolio/
+blog/blog-images/*.png.png
+blog/blog-images/*.jpg.jpg
+
+# ------------------------------
+# Optional: Hide blog until ready to deploy
+# (Remove the '#' below if you want to hide blog)
+# ------------------------------
+# blog/
+
+# ------------------------------
+# Dependency directories (if any in future)
+# ------------------------------
+node_modules/
+jspm_packages/
+bower_components/
+
+# ------------------------------
+# Build outputs
+# ------------------------------
+dist/
+build/
+out/
+*.min.js
+*.min.css
+
+# ------------------------------
+# Environment files
+# ------------------------------
+.env
+.env.local
+.env.*.local
+
+# ------------------------------
+# IDE folders
+# ------------------------------
+.idea/
+.vscode/
+*.code-workspace
+
+# ------------------------------
+# Miscellaneous
+# ------------------------------
+*.zip
+*.rar
+*.7z
+*.gz
+*.tar
