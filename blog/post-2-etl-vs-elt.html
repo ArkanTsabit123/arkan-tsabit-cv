@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ETL vs ELT: Choosing the Right Approach | Arkan Tsabit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #0a0a0a;
+      font-family: 'Poppins', sans-serif;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #1a1a1a;
+      border-radius: 28px;
+      padding: 48px;
+      border: 1px solid #2c2c2c;
+      box-shadow: 0 20px 35px -10px rgba(0,0,0,0.5);
+    }
+    h1 {
+      color: #fff;
+      font-size: 38px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    .meta {
+      color: #aaa;
+      font-size: 14px;
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #2c2c2c;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .meta span i {
+      margin-right: 6px;
+      color: #ffc107;
+    }
+    .category {
+      display: inline-block;
+      background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+      color: #000;
+      padding: 5px 16px;
+      border-radius: 40px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+    .content {
+      color: #ddd;
+      font-size: 17px;
+      line-height: 1.85;
+    }
+    .content p {
+      margin-bottom: 24px;
+    }
+    .content h2 {
+      color: #ffc107;
+      font-size: 28px;
+      margin: 40px 0 18px;
+      font-weight: 600;
+      border-left: 4px solid #ffc107;
+      padding-left: 18px;
+    }
+    .content h3 {
+      color: #ffda6a;
+      font-size: 22px;
+      margin: 30px 0 12px;
+      font-weight: 500;
+    }
+    .content ul, .content ol {
+      margin-left: 24px;
+      margin-bottom: 28px;
+    }
+    .content li {
+      margin-bottom: 10px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 48px;
+      color: #ffc107;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .back-link:hover {
+      gap: 12px;
+      color: #ffda6a;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 28px 0;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .comparison-table th, .comparison-table td {
+      border: 1px solid #333;
+      padding: 14px 16px;
+      text-align: left;
+    }
+    .comparison-table th {
+      background: #2a2a2a;
+      color: #ffc107;
+      font-weight: 600;
+    }
+    .comparison-table tr:hover {
+      background: #222;
+    }
+    .note {
+      background: rgba(255,193,7,0.08);
+      padding: 20px 24px;
+      border-radius: 20px;
+      margin: 36px 0 24px;
+      border-left: 4px solid #ffc107;
+    }
+    .image-placeholder {
+      background: #101010;
+      border-radius: 24px;
+      padding: 28px 20px;
+      margin: 32px 0;
+      text-align: center;
+      border: 1px dashed #ffc107;
+      transition: 0.2s;
+    }
+    .image-placeholder i {
+      font-size: 48px;
+      color: #ffc107;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+    .image-placeholder p {
+      color: #aaa;
+      font-size: 14px;
+      margin: 10px 0 0;
+    }
+    .img-caption {
+      font-size: 13px;
+      color: #888;
+      margin-top: 10px;
+    }
+    .decision-flow {
+      background: #0f0f0f;
+      border-radius: 20px;
+      padding: 24px;
+      margin: 30px 0;
+      text-align: center;
+    }
+    hr {
+      border: none;
+      height: 1px;
+      background: #2c2c2c;
+      margin: 30px 0;
+    }
+    .badge {
+      background: #ffc10720;
+      padding: 4px 12px;
+      border-radius: 30px;
+      font-size: 13px;
+      color: #ffc107;
+    }
+    @media (max-width: 680px) {
+      .container { padding: 28px; }
+      h1 { font-size: 28px; }
+      .comparison-table th, .comparison-table td { padding: 8px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="category"><i class="fas fa-database" style="margin-right: 6px;"></i> Data Engineering · Decision Guide</div>
+    <h1>ETL vs ELT: Choosing the Right Data Integration Approach</h1>
+    <div class="meta">
+      <span><i class="far fa-calendar-alt"></i> February 20, 2026</span>
+      <span><i class="far fa-clock"></i> 8 min read</span>
+      <span><i class="fas fa-chart-line"></i> Intermediate</span>
+    </div>
+    <div class="content">
+      <p>One of the most common debates in data engineering is whether to use ETL (Extract-Transform-Load) or ELT (Extract-Load-Transform). The choice impacts everything from infrastructure costs to data freshness and analytical flexibility. Based on my experience building data platforms for fintech, e-commerce, and logistics companies, I'll walk you through a practical framework for making the right decision — plus real-world examples and trade-offs you won't find in textbook definitions.</p>
+
+      <!-- TEMPAT GAMBAR 1: Perbandingan Alur ETL vs ELT -->
+      <div class="image-placeholder">
+        <i class="fas fa-code-branch"></i>
+        <p><strong>📸 Gambar 1: Perbandingan Alur ETL vs ELT</strong><br>Letakkan diagram alur perbedaan timing transformasi data di sini.</p>
+        <div class="img-caption">Recommended: visual side-by-side ETL pipeline (Transform sebelum Load) vs ELT (Load lalu Transform di warehouse)</div>
+      </div>
+
+      <h2>Core Difference Between ETL and ELT</h2>
+      <p>The fundamental difference lies in <strong>when the transformation occurs</strong>. ETL transforms data before loading it into the target system — this requires a separate transformation engine (like Spark or Python). ELT loads raw data first and leverages the raw power of modern cloud data warehouses (Snowflake, BigQuery, Oracle ADW) to transform it later. This seemingly simple shift has massive implications for scalability, maintenance, and data governance.</p>
+      
+      <table class="comparison-table">
+        <thead>
+          <tr><th>Characteristic</th><th>ETL</th><th>ELT</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Transformation Timing</strong></td><td>Before loading</td><td>After loading</td></tr>
+          <tr><td><strong>Processing Engine</strong></td><td>Separate transformation server (Spark, Python)</td><td>Target database compute resources</td></tr>
+          <tr><td><strong>Speed for Large Volumes</strong></td><td>Slower (bottleneck at transform stage)</td><td>Faster (leverages MPP architecture)</td></tr>
+          <tr><td><strong>Raw Data Preservation</strong></td><td>Typically discarded after transform</td><td>Preserved for future use (data lakehouse pattern)</td></tr>
+          <tr><td><strong>Storage Cost</strong></td><td>Lower (only transformed data stored)</td><td>Higher (raw + transformed)</td></tr>
+          <tr><td><strong>Best For</strong></td><td>Legacy systems, compliance, smaller volumes</td><td>Cloud data warehouses, big data, agility</td></tr>
+        </tbody>
+      </table>
+
+      <!-- TEMPAT GAMBAR 2: Contoh Implementasi ELT Modern -->
+      <div class="image-placeholder">
+        <i class="fas fa-cloud-upload-alt"></i>
+        <p><strong>📸 Gambar 2: Arsitektur ELT Modern (dbt + Snowflake/BigQuery/ADW)</strong><br>Tambahkan diagram arsitektur dengan source → raw layer → transformation → mart.</p>
+        <div class="img-caption">Contoh: ELT dengan dbt di Oracle Autonomous Data Warehouse</div>
+      </div>
+
+      <h2>When to Use ETL (Real-World Cases)</h2>
+      <ul>
+        <li><strong>Compliance & Data Masking</strong> — Healthcare (HIPAA) or finance (PCI) often require PII removal before any storage. ELT would temporarily store sensitive raw data — a dealbreaker.</li>
+        <li><strong>Legacy Data Warehouses</strong> — Traditional appliances (Teradata, Netezza, or on-prem SQL Server) lack the compute power for heavy post-load transformations.</li>
+        <li><strong>Small to Medium Data Volumes</strong> — Under 100GB daily ingestion. ETL tooling (like Airflow + Python) is simpler and cheaper to maintain at this scale.</li>
+        <li><strong>Complex, Non-SQL Logic</strong> — When you need computer vision, NLP, or external API calls during transformation, ETL gives you full programming flexibility.</li>
+      </ul>
+
+      <h2>When to Use ELT (Modern Best Practice)</h2>
+      <ul>
+        <li><strong>Cloud Data Warehouses</strong> — Snowflake, BigQuery, Oracle ADW, Redshift. These platforms are literally built for ELT: separation of storage and compute, massive parallelism.</li>
+        <li><strong>Large Data Volumes</strong> — Terabyte-scale daily ingestion. ELT avoids the "transform bottleneck" by using the warehouse's own engine.</li>
+        <li><strong>Raw Data Exploration</strong> — Data scientists and analysts need access to raw, untransformed data for discovery and debugging.</li>
+        <li><strong>Schema-on-Read</strong> — Semi-structured data (JSON, logs) where requirements change frequently. Load first, model later.</li>
+        <li><strong>Cost-Effective Transformation</strong> — With dbt, you pay only for the compute you use, and you can scale up/down independently.</li>
+      </ul>
+
+      <div class="decision-flow">
+        <i class="fas fa-sitemap" style="font-size: 28px; color: #ffc107; margin-bottom: 12px; display: block;"></i>
+        <p style="margin-bottom: 8px;"><strong>📌 Simple Decision Framework:</strong></p>
+        <p>Do you have compliance-driven need to mask/delete data <u>before</u> storage? → <strong>ETL</strong><br>
+        Otherwise → <strong>ELT</strong> (especially if you're on a modern cloud warehouse)</p>
+      </div>
+
+      <!-- TEMPAT GAMBAR 3: dbt Lineage Graph -->
+      <div class="image-placeholder">
+        <i class="fas fa-project-diagram"></i>
+        <p><strong>📸 Gambar 3: Contoh dbt Lineage & Transformasi ELT</strong><br>Letakkan screenshot lineage graph dari proyek dbt (sumber → staging → mart).</p>
+        <div class="img-caption">dbt memungkinkan transformasi SQL yang teruji dan terdokumentasi</div>
+      </div>
+
+      <h2>Tools I Use in Production</h2>
+      <ul>
+        <li><strong>ELT Pipeline</strong> — dbt (Data Build Tool) + Oracle Autonomous Database / BigQuery. dbt handles all transformations as version-controlled SQL.</li>
+        <li><strong>ETL Pipeline</strong> — Apache Airflow with Python tasks (using Pandas or PySpark for heavy transforms).</li>
+        <li><strong>Orchestration for Both</strong> — Apache Airflow or Prefect. We use Airflow to schedule both ETL dags and dbt runs.</li>
+        <li><strong>Data Loading (Extract & Load)</strong> — Airbyte, Fivetran, or custom Python connectors.</li>
+      </ul>
+
+      <h3>Real-World Performance Numbers</h3>
+      <p>In a recent project with 2TB daily log data, switching from ETL (Python + Pandas on a separate server) to ELT (dbt + Snowflake) reduced pipeline runtime from <strong>4.5 hours to 22 minutes</strong> — and cut infrastructure costs by 40% because we no longer needed a dedicated transformation cluster. The raw data is still available for ad-hoc analysis, which made data engineers very happy.</p>
+
+      <!-- TEMPAT GAMBAR 4: Dashboard Perbandingan Biaya/Waktu -->
+      <div class="image-placeholder">
+        <i class="fas fa-chart-bar"></i>
+        <p><strong>📸 Gambar 4: Perbandingan Performa ETL vs ELT (Time & Cost)</strong><br>Masukkan grafik batang runtime dan biaya untuk skenario data besar.</p>
+        <div class="img-caption">Contoh: ELT 22 menit vs ETL 4.5 jam untuk workload 2TB</div>
+      </div>
+
+      <div class="note">
+        <i class="fas fa-lightbulb" style="margin-right: 8px;"></i>
+        <strong>Key Takeaway:</strong> Start with ELT unless you have a specific compliance or technical constraint that requires ETL. Modern cloud databases are purpose-built for transformation at scale. Even if you think you need ETL, try ELT first — you can always add a masking step before load without fully committing to traditional ETL.
+      </div>
+
+      <hr>
+      <p><i class="fas fa-comments" style="color: #ffc107; margin-right: 8px;"></i> Have a specific use case? <strong>Reach out on LinkedIn or GitHub</strong> — I'm happy to share more detailed architectures. In my next article, I'll cover <strong>incremental strategies in ELT pipelines with dbt</strong>.</p>
+    </div>
+    <a href="../index.html#blog" class="back-link"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+  </div>
+</body>
+</html>

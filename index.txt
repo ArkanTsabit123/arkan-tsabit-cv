@@ -1,0 +1,72 @@
+HOME
+- Short Profile: Arkan Tsabit – Data Engineer | AI & Cloud | Certified Meta, IBM, Oracle
+- Quick Contact: Phone, Email, GitHub, LinkedIn
+- Key Highlights:
+  - Rank 108 Globally – Oracle Race to Certification 2025 (Top 500 Leaderboard)
+  - 10+ Professional Certifications (Oracle, IBM, Meta)
+  - 35% Revenue Growth | 40% Customer Retention Increase
+  - Managed 200+ Student Records & Taught 200+ Students Digital Literacy
+
+ABOUT ME
+- Certified professional by Oracle, IBM, and Meta in cloud database, data engineering, AI vector search, and multicloud architecture
+- Ranked 108 globally in Oracle Race to Certification 2025 among millions of participants
+- Experienced in building scalable data pipelines, managing cloud database services, and implementing AI-powered solutions on Oracle Cloud Infrastructure
+- Background: Database Administrator, Business Manager, Reporting Officer
+- Fast learner: Transitioned from business management to database administration and cloud data engineering with 10+ certifications
+
+WORK EXPERIENCE
+- GOJEK COMPANY (Jan 2026 – Present)
+  → Analyze real-time traffic patterns, reduce trip time by 15%
+  → Manage operational costs & geospatial data logic
+- RIFAN FINANCINDO BERJANGKA (Nov 2025 – Dec 2025)
+  → Business Consultant: investor acquisition, market insights, CRM tracking
+- ORPHAN HOUSE OF SATU BENIH (Computer Teacher, English Teacher & DBA)
+  → Fixed bugs in data-driven applications, managed 200+ student records
+  → Taught computer and digital literacy to 200+ students
+- SOEKARNO-HATTA AIRPORT – Airport Transportation (Apr 2024 – Apr 2025)
+  → Coordinated flight schedules, navigated terminal layouts, dynamic pricing management
+- BEJAGOO COFFEE & EATERY (Assistant Business Manager, Jun 2020 – Mar 2024)
+  → Analyzed sales data, developed loyalty program (+40% retention)
+  → Increased monthly revenue by 35% through data-driven strategies
+- SOEKARNO-HATTA AIRPORT – Facility Service & Reporting Officer (Feb 2016 – May 2020)
+  → Real-time facility damage reporting across Terminals 1, 2, and 3
+  → Optimized resource allocation, generated daily/weekly/monthly performance reports
+
+TECHNICAL SKILLS
+- Cloud Platforms: Oracle Cloud Infrastructure (OCI), Multicloud Architecture
+- Databases: Oracle Autonomous Database, MySQL, SQL, JDBC, database tuning, backup & recovery
+- Data Engineering: ETL/ELT pipeline development, Apache Airflow, Python, data integration workflows
+- AI & Machine Learning: Generative AI, RAG (Retrieval-Augmented Generation), Vector Search, OCI AI Services (Vision, Document Understanding, Speech, Language)
+- Data Platform: Data lake, data warehouse, data platform design & architecture
+- Tools & Technologies: Git, GitHub, Visual Studio Code, Spreadsheets, Reporting tools, CRM systems
+
+SOFT SKILLS
+- Analytical Thinking – Sales data, traffic patterns, operational reports analysis
+- Problem-solving – Root cause identification in fast-paced environments
+- Attention to Detail – 200+ student records, operational costs, performance reports
+- Fast Learning & Adaptability – 10+ certifications across domains
+- Communication – English (Intermediate), Indonesian (Native)
+
+CERTIFICATIONS (10+)
+- Oracle:
+  - OCI Multicloud Architect Professional
+  - OCI Generative AI Professional
+  - AI Vector Search Certified Professional
+  - Autonomous Database Cloud Professional
+  - Cloud Database Services Professional
+  - Oracle Data Platform Foundations Associate
+  - OCI AI Foundations Associate
+  - OCI Foundations Associate
+- IBM: Data Engineering Professional Certificate
+- Meta: Database Engineer Professional Certificate
+
+EDUCATION & ACHIEVEMENTS
+- Ristek Nusantara Jaya – Senior High School Equivalent (2012–2015)
+- Oracle Race to Certification 2025 – Rank 108 Worldwide (Top 500 Leaderboard)
+- Coursera (2025) – Data Engineering, Database Engineering, Cloud Technologies
+
+CONTACT & SOCIAL
+- Phone: 6281295709620
+- Email: arkan.tsabit.meta.work@gmail.com
+- GitHub: github.com/ArkanTsabit123
+- LinkedIn: linkedin.com/in/arkan-tsabit-116a2434b/
