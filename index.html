@@ -146,7 +146,7 @@
     <div class="main-content">
 
       <!--
-        - #NAVBAR (Only About, Resume, Contact)
+        - #NAVBAR
       -->
 
       <nav class="navbar">
@@ -880,7 +880,8 @@
       };
 
       try {
-        await fetch('https://script.google.com/macros/s/AKfycbwApvLV1q7UjYc-jSY_lJm_jPKlCe-6dhS9G6FtzxM9TlJpE86Ru28WqX154T2XTlT0Aw/exec', {          method: 'POST',
+        await fetch('https://script.google.com/macros/s/AKfycbwApvLV1q7UjYc-jSY_lJm_jPKlCe-6dhS9G6FtzxM9TlJpE86Ru28WqX154T2XTlT0Aw/exec', {
+          method: 'POST',
           mode: 'no-cors',
           headers: {
             'Content-Type': 'application/json'
@@ -888,8 +889,6 @@
           body: JSON.stringify(formData)
         });
 
-        // Karena mode no-cors, kita tidak bisa dapat response
-        // Jadi langsung anggap sukses
         alert('Message sent successfully! Thank you for contacting me.');
         this.reset();
       } catch (error) {
